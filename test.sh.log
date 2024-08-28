@@ -635,3 +635,80 @@ Successfully wroted /tmp/aeld-data/bewJ5jkL4wk39KJUdnmoeIC5XYVU6WjX/ynskiziltepe
 The number of files are 10 and the number of matching lines are 10
 success
 Test of assignment assignment1 complete with success
+Running test with user yns
+CMake Error: The current CMakeCache.txt directory /home/yns/Desktop/as3/build/CMakeCache.txt is different than the directory /home/yns/Desktop/coursera/aesd-assignments/build where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+CMake Error: The source "/home/yns/Desktop/as3/CMakeLists.txt" does not match the source "/home/yns/Desktop/coursera/aesd-assignments/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.
+[ 16%] Built target unity
+[ 25%] Generating /home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/test/assignment1/Test_hello_Runner.c, /home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/test/assignment1/Test_assignment_validate_Runner.c, /home/yns/Desktop/coursera/aesd-assignments/student-test/assignment1/Test_validate_username_Runner.c, /home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/test/unity_runner.c
+Test files for auto dependency generation test/assignment1/Test_hello.c test/assignment1/Test_assignment_validate.c ../student-test/assignment1/Test_validate_username.c
+Autogenerating runner for test/assignment1/Test_hello.c
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/Unity/auto/generate_test_runner.rb:344: warning: Passing safe_level with the 2nd argument of ERB.new is deprecated. Do not use it, and specify other arguments as keyword arguments.
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/Unity/auto/generate_test_runner.rb:344: warning: Passing trim_mode with the 3rd argument of ERB.new is deprecated. Use keyword argument like ERB.new(str, trim_mode: ...) instead.
+Autogenerating runner for test/assignment1/Test_assignment_validate.c
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/Unity/auto/generate_test_runner.rb:344: warning: Passing safe_level with the 2nd argument of ERB.new is deprecated. Do not use it, and specify other arguments as keyword arguments.
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/Unity/auto/generate_test_runner.rb:344: warning: Passing trim_mode with the 3rd argument of ERB.new is deprecated. Use keyword argument like ERB.new(str, trim_mode: ...) instead.
+Autogenerating runner for ../student-test/assignment1/Test_validate_username.c
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/Unity/auto/generate_test_runner.rb:344: warning: Passing safe_level with the 2nd argument of ERB.new is deprecated. Do not use it, and specify other arguments as keyword arguments.
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/Unity/auto/generate_test_runner.rb:344: warning: Passing trim_mode with the 3rd argument of ERB.new is deprecated. Use keyword argument like ERB.new(str, trim_mode: ...) instead.
+Autogenerating test/unity_runner.c
+[ 33%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/test/assignment1/Test_hello_Runner.c.o
+[ 41%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/test/assignment1/Test_assignment_validate_Runner.c.o
+[ 50%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/__/student-test/assignment1/Test_validate_username_Runner.c.o
+[ 58%] Building C object assignment-autotest/CMakeFiles/assignment-autotest.dir/test/unity_runner.c.o
+[100%] Built target assignment-autotest
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/test/assignment1/Test_hello.c:6:test_hello:INFO: Hello!  Your unity setup is working!
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/test/assignment1/Test_hello.c:4:test_hello:PASS
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/test/assignment1/Test_assignment_validate.c:9:test_assignment_validate:PASS
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK
+/home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/../student-test/assignment1/Test_validate_username.c:15:test_validate_my_username:PASS
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK
+Executing assignment test script
+~/Desktop/as3/assignment-autotest/test/assignment1 ~/Desktop/as3
+~/Desktop/as3/finder-app ~/Desktop/as3/assignment-autotest/test/assignment1 ~/Desktop/as3
+error, please use two arguments
+Format: ./writer.sh <file> <str
+error, please use two arguments
+Format: ./writer.sh <file> <str
+Using default value AELD_IS_FUN for string to write
+Using default value 10 for number of files to write
+Writing 10 files containing string AELD_IS_FUN to /tmp/aeld-data
+Successfully wroted /tmp/aeld-data/ynskiziltepe1.txt
+Successfully wroted /tmp/aeld-data/ynskiziltepe2.txt
+Successfully wroted /tmp/aeld-data/ynskiziltepe3.txt
+Successfully wroted /tmp/aeld-data/ynskiziltepe4.txt
+Successfully wroted /tmp/aeld-data/ynskiziltepe5.txt
+Successfully wroted /tmp/aeld-data/ynskiziltepe6.txt
+Successfully wroted /tmp/aeld-data/ynskiziltepe7.txt
+Successfully wroted /tmp/aeld-data/ynskiziltepe8.txt
+Successfully wroted /tmp/aeld-data/ynskiziltepe9.txt
+Successfully wroted /tmp/aeld-data/ynskiziltepe10.txt
+./finder.sh: line 3: [2: command not found
+./finder.sh: line 12: [!: command not found
+The number of files are 10 and the number of matching lines are 10
+success
+Writing 10 files containing string AELD_IS_FUN to /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe1.txt
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe2.txt
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe3.txt
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe4.txt
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe5.txt
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe6.txt
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe7.txt
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe8.txt
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe9.txt
+Successfully wroted /tmp/aeld-data/zhKRv27NuZvJkkooBLpwqMabeunTzrW0/ynskiziltepe10.txt
+./finder.sh: line 3: [2: command not found
+./finder.sh: line 12: [!: command not found
+The number of files are 10 and the number of matching lines are 10
+success
+Test of assignment assignment1 complete with success
