@@ -22,7 +22,7 @@ int retVal = 0;
     if (retVal == -1)
             return 0;
 
-    return WIFEXITED(retVal) && WEXITSTATUS(retVal) == 0;;
+    return true;
 }
 
 /**
@@ -84,7 +84,7 @@ bool do_exec(int count, ...)
             return 0;
         }
 
-        return WIFEXITED(status) && WEXITSTATUS(status) == 0;
+        return true;
     }
 }
 
@@ -153,6 +153,6 @@ bool do_exec_redirect(const char *outputfile, int count, ...)
             return 0;
         }
 
-        return WIFEXITED(status) && WEXITSTATUS(status) == 0;
+        return true;
     }
 }
