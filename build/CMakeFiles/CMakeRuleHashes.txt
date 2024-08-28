@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+71d4c0a19e6fa2fcfb5b32c615fbba59 /home/yns/Desktop/coursera/aesd-assignments/assignment-autotest/test/assignment1/Test_hello_Runner.c
