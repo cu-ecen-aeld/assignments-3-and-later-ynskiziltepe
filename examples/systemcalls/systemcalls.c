@@ -9,13 +9,18 @@
 */
 bool do_system(const char *cmd)
 {
-
+int retVal = 0;
 /*
  * TODO  add your code here
  *  Call the system() function with the command set in the cmd
  *   and return a boolean true if the system() call completed with success
  *   or false() if it returned a failure
 */
+
+    retVal = system(cmd);
+
+    if (retVal == -1)
+            return 0;
 
     return true;
 }
@@ -59,9 +64,29 @@ bool do_exec(int count, ...)
  *
 */
 
-    va_end(args);
+    pid_t pid = fork();
+    if (pid == -1) 
+	{
+        printf("Error, fork");
+        return 0;
+    }
 
-    return true;
+    if (pid == 0) {
+        execv(command[0], command);
+        printf("Error, execv");
+        _exit(EXIT_FAILURE);
+    } else 
+	{
+        int status;
+        if (waitpid(pid, &status, 0) == -1) 
+		{
+            printf("Error, waitpid");
+            return 0;
+        }
+
+        va_end(args);
+        return WIFEXITED(status) && WEXITSTATUS(status) == 0;
+    }
 }
 
 /**
@@ -93,7 +118,42 @@ bool do_exec_redirect(const char *outputfile, int count, ...)
  *
 */
 
-    va_end(args);
+    pid_t pid = fork();
+    if (pid == -1)
+	{
+        printf("Error, fork");
+        return 0;
+    }
 
-    return true;
+    if (pid == 0) {
+        int fd = open(outputfile, O_WRONLY | O_CREAT | O_TRUNC, 0777);
+        if (fd == -1) 
+		{
+            printf("Error, open()");
+            _exit(EXIT_FAILURE);
+        }
+
+        if (dup2(fd, STDOUT_FILENO) == -1) 
+		{
+            printf("Error, dup2");
+            close(fd);
+            _exit(EXIT_FAILURE);
+        }
+
+        close(fd); 
+        execv(command[0], command);
+
+        printf("Error, execv");
+        _exit(EXIT_FAILURE);
+    } else 
+	{
+        int status;
+        if (waitpid(pid, &status, 0) == -1) 
+		{
+            printf("Error, waitpid");
+            return 0;
+        }
+
+        return true;
+    }
 }
