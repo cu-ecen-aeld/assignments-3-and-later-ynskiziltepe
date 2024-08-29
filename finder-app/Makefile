@@ -1,42 +1,24 @@
-# # Compiler and flags
-# CC := gcc
-# CROSS_COMPILE :=
 
-# # Cross-compiler for ARM (adjust path and prefix as needed)
-# CROSS_CC := aarch64-none-linux-gnu-gcc
-# CROSS_CFLAGS :=
+#CROSS_COMPILE = aarch64-none-linux-gnu- 
+# Cross-compile settings
+#CROSS_COMPILE ?= aarch64-none-linux-gnu-
+PREFIX := $(CROSS_COMPILE)
+CC := $(PREFIX)gcc
 
-# # Default target: Build the writer application
-# default: writer
-
-# # Target for building writer application
-# writer:
-# 	$(CROSS_COMPILE)$(CC) $(CFLAGS) -o writer writer.c $(LDFLAGS)
-
-# # Clean target: Remove writer application and .o files
-# clean:
-# 	rm -f writer *.o
-
-# # Cross-compilation support
-# ifeq ($(filter aarch64-none-linux-gnu-%,$(CROSS_COMPILE)),aarch64-none-linux-gnu-)
-# CROSS_COMPILE := $(patsubst aarch64-none-linux-gnu-%,%,$(CROSS_COMPILE))
-# CC := $(CROSS_CC)
-# endif
-
-.PHONY: all
+# Targets
 all: writer
 
-CROSS_COMPILE ?=
+# Object file creation
+writer.o: writer.c
+	$(CC) -c writer.c -o writer.o
 
-CC := $(CROSS_COMPILE)gcc
-CFLAGS := -Wall -Wextra -std=c11
+# Executable file creation
+writer: writer.o
+	$(CC) writer.o -o writer
 
-SRCS := writer.c
-OBJS := $(SRCS:.c=.o)
-
-writer: $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o writer
-
-.PHONY: clean
+# Clean up
 clean:
-	rm -rf writer $(OBJS)
+	rm -f *.o writer
+
+# Extra recommendations
+.PHONY: all clean
